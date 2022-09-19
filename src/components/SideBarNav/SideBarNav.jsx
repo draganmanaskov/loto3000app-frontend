@@ -90,7 +90,7 @@ const SideBarNav = () => {
                         null
                     }
                     {
-                        user.role == "2" ?
+                        user?.role == "2" ?
                         <SideBarLinks sideBarFull={sideBarFull} to={'/dashboard'} icon={<MdOutlineDashboardCustomize size="28"/>} text={"Dasboard"}/> :
                         null
                     } 

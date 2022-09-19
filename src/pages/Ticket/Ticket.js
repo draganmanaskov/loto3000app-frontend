@@ -35,7 +35,7 @@ const getSession = async () => {
             url:'http://localhost:7107/api/Session/getActiveSession',
           });
           setSession(response.data)
-          navigate('/')
+          
           console.log(response.data)
     } catch (error) {
         console.log(error)
@@ -91,6 +91,7 @@ const onSubmit = async (e) => {
           url:`http://localhost:7107/api/Ticket/createTicket`,
           data: {numbers:list, sessionId:session.id}
         });
+        navigate('/')
         console.log(response.data)
   } catch (error) {
       console.log(error)
